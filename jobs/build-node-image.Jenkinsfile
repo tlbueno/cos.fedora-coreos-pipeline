@@ -198,7 +198,7 @@ lock(resource: "build-node-image", priority: queue_priority) {
                                     // the near future anyway
                                     shwrap("""
                                         set +o pipefail
-                                        cosa init https://github.com/openshift/os --branch release-${openshift_stream} --force || true
+                                        cosa init https://github.com/tlbueno/ocp.os.git --branch pr/add-extension-install-test --force || true
                                     """)
 
                                     // sync across the auth credentials to remote sessions
